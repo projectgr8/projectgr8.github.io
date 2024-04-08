@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý tài chính cá nhân</title>
+    
+</head>
+<body class="header">
+    <link rel="stylesheet" href="style.css">
+    <header>
+        <h1>Quản lý tài chính cá nhân</h1>
+    </header>
+    <main>
+        <section class="them-moi">
+            <h2>Thêm mới giao dịch</h2>
+            <form action="#">
+                <label for="loai">Loại giao dịch:</label>
+                <select name="loai" id="loai">
+                    <option value="thu">Thu nhập</option>
+                    <option value="chi">Chi tiêu</option>
+                </select>
+                <br>
+                <label for="so-tien">Số tiền:</label>
+                <input type="number" name="so-tien" id="so-tien">
+                <br>
+                <label for="chi-tiet"> Chi tiêt :</label>
+                <textarea name="chi-tiet" id="chi-tiet"></textarea>
+                <br>
+                <button type="submit">Thêm</button>
+            </form>
+        </section>
+        <section class="danh-sach">
+            <h2>Danh sách giao dịch</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ngày</th>
+                        <th>Loại</th>
+                        <th>Số tiền</th>
+                        <th>Chi tiêt </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-03-31</td>
+                        <td>Thu nhập</td>
+                        <td>100.000</td>
+                        <td>Lương tháng 3</td>
+                    </tr>
+                    <tr>
+                        <td>2024-03-31</td>
+                        <td>Chi tiêu</td>
+                        <td>50.000</td>
+                        <td>Đi ăn trưa</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 - Bản quyền thuộc về bạn</p>
+    </footer>
+</body>
+</html>
