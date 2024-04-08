@@ -20,5 +20,6 @@ h1{
  h2 { 
     padding: 100px; 
     font: 30px 'consolas';
-    color: rgb(174, 119, 0)" 
+    color: rgb(174, 119, 0);
+    text-align: center;
  }
