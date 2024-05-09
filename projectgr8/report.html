@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> QLTC</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Cormorant+Upright:wght@300;400;500;600;700&family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+  
+  </head>
+  <body> 
+
+     <script  type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Tháng', 'Nhu cầu', 'Cá nhân', 'Tiết kiệm'],
+          ['Tháng 1', 2580000, 500000, 200000],
+          ['Tháng 2', 2170000, 460000, 250000],
+          ['Tháng 3', 3660000, 1120000, 300000],
+          ['Tháng 4', 3030000, 540000, 350000]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Báo cáo tài chính các tháng đầu năm',
+            subtitle: 'Từ tháng 1 đến tháng 5',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+    <body style="font:icon"; class="header">
+
+      <nav class="navbar navbar-expand-sm text-white bg-dark" id="Navbar">
+          <div class="container">
+              
+            <!-- navbar-expand: dàn các mục lục thành hàng ngang -->
+            <!-- navbar-brand:Thương hiệu,logo -->
+            <div>
+               <a style="font-family: 'Viaoda Libre', serif; font-size:30px;
+                padding: 10px 20px ;" class="navbar-brand" id="logo" ><span>P</span>erfin</a>
+              
+            </div>
+            <div class="collapse navbar-collapse" id="mynavbar" style="text-align:right;">
+              <ul class="navbar-nav me-auto">
+              
+                          <a href="transactions.html">Transaction</a>
+                          <a href="budget.html">Budget</a>
+                          <a href="goals.html">Goals</a>
+                          <a href="report.html">Reports</a>
+                 
+              </ul>
+              </div>
+          </div>
+      </nav>
+      <h2 style="font-family: 'Viaoda Libre', serif;font-weight: 500;font-style: normal;">Báo cáo</h2>   
+    <div id="columnchart_material" style="width: 900px; height: 500px; padding: 10px"></div>
+    
+  </body> 
+  <footer>
+          <p>&copy; 2024 - Bản quyền thuộc về Group 8 - Webdesign</p>
+      </footer>
+</html>
