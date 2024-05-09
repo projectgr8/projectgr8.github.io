@@ -1,16 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Danh sách giao dịch</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Cormorant+Upright:wght@300;400;500;600;700&family=Viaoda+Libre&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body class="header">
-    <link rel="stylesheet" href="style.css">
+    <nav class="navbar navbar-expand-sm text-white bg-dark" id="Navbar">
+        <div class="container">
+            
+          <!-- navbar-expand: dàn các mục lục thành hàng ngang -->
+          <!-- navbar-brand:Thương hiệu,logo -->
+          <div>
+             <a style="font-family: 'Viaoda Libre', serif; font-size:30px;
+              padding: 10px 20px ;" class="navbar-brand" id="logo" href="index.html" ><span>P</span>erfin</a>
+            
+          </div>
+          <div class="collapse navbar-collapse" id="mynavbar" style="text-align:right;">
+            <ul class="navbar-nav me-auto">
+            
+                        <a href="transactions.html">Transaction</a>
+                        <a href="budget.html">Budget</a>
+                        <a href="goals.html">Goals</a>
+                        <a href="report.html">Reports</a>
+               
+            </ul>
+            </div>
+        </div>
+    </nav>
     <main>
-        <section class="them-moi">  
-            <form action="#">
-                <h2 align:"center">Thêm mới giao dịch</h2>
+        <section class="them-moi" >  
+            <form action="#" method="post">
+                <h2 style="font-family: 'Viaoda Libre', serif;font-weight: 500;font-style: normal; color: rgb(255, 255, 255)" >Thêm mới giao dịch</h2>
                 <label for="loai">Loại giao dịch:</label>
                 <select name="loai" id="loai">
                     <option value="thu">Thu nhập</option>
@@ -23,9 +48,56 @@
                 <label for="chi-tiet"> Chi tiêt :</label>
                 <textarea name="chi-tiet" id="chi-tiet"></textarea>
                 <br>
-                <button type="submit">Thêm</button>
+                <button type="submit">Thêm</button> 
+                <div class="form-group">
+            <label for="Ngay_Thang_Nam">Ngày Tháng Năm:</label>
+            <input type="date" id="Ngay_Thang_Nam" name="Ngay_Thang_Nam">
+        </div>
+
+        <div class="form-group">
+            <label for="Loai_Giao_Dich">Lọai Giao Dịch:</label>
+            <select id="Loai_Giao_Dich" name="Loai_Giao_Dich">
+                <option value="Thu_Nhap">Thu Nhâp</option>
+                <option value="Chi_Tieu">Chi Tiêu</option>
+            </select>
+        <div class="form-group">
+            <label for="Loai_Chi">Loại Chi:</label>
+            <select id="Loai_Chi" name="Loai_Chi">
+                <option value="An_uong">Ăn uông</option>
+                <option value="Di_lai">Đi lại</option>
+                <option value="Giai_tri">Giải trí</option>
+                <option value="Sinh_hoat">Sinh hoạt</option>
+                <option value="Khac">Khác</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="So_Tien_Chi">Sô Tiên Chi:</label>
+            <input type="number" id="So_Tien_Chi" name="So_Tien_Chi">
+        </div>
+        <div class="form-group">
+            <label for="Mo_Ta">Mô Tả:</label>
+            <textarea id="Mo_Ta" name="Mo_Ta"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="Loai_Thu">Loại Thu:</label>
+            <select id="Loai_Thu" name="Loai_Thu">
+                <option value="Cong_Viec_Chinh">Công Viêc Chính</option>
+                <option value="Cong_Viec_Phu">Công Viêc Phụ</option>
+                <option value="Khac">Khác</option>
+                </select>
+        </div>
+        <div class="form-group">
+            <label for="So_Tien_Thu_Duoc">Sô Tiên Thu Đưọc:</label>
+            <input type="number" id="So_Tien_Thu_Duoc" name="So_Tien_Thu_Duoc">
+                </div>
+        <div class="form-group">
+            <label for="Ghi_Chu">Ghi Chú:</label>
+            <textarea id="Ghi_Chu" name="Ghi_Chu"></textarea>
+        </div>
             </form>
         </section>
+       
+        
         <section class="danh-sach">
             <h2>Danh sách giao dịch</h2>
             <table>
@@ -55,7 +127,9 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 - Bản quyền thuộc về bạn</p>
+        <p>&copy; 2024 - Bản quyền thuộc về Group 8 - Webdesign</p>
     </footer>
 </body>
 </html>
+
+
